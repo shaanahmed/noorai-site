@@ -92,6 +92,26 @@ header {
   padding: 14px 0;
 }
 
+.theme-toggle {
+  margin-left: auto;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: rgba(129, 199, 132, 0.1);
+  color: var(--text);
+  font-family: "Manrope", "Trebuchet MS", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: rgba(129, 199, 132, 0.2);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -308,6 +328,67 @@ h1 {
   animation-delay: 230ms;
 }
 
+body.theme-luxury {
+  --bg: #101414;
+  --surface: #1d2121;
+  --primary: #b8933f;
+  --highlight: #f2d28b;
+  --text: #f9f5eb;
+  --text-muted: #d8ceb9;
+  --border: rgba(242, 210, 139, 0.24);
+  --border-strong: rgba(242, 210, 139, 0.48);
+  --shadow: 0 16px 46px rgba(0, 0, 0, 0.56);
+  background:
+    radial-gradient(circle at 72% 14%, rgba(242, 210, 139, 0.18), transparent 28%),
+    radial-gradient(circle at 15% 80%, rgba(184, 147, 63, 0.12), transparent 30%),
+    linear-gradient(164deg, #070909 0%, #121615 58%, #080a0a 100%);
+}
+
+body.theme-luxury::before {
+  background-image: linear-gradient(rgba(242, 210, 139, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 210, 139, 0.08) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+body.theme-luxury::after {
+  background: radial-gradient(circle, rgba(242, 210, 139, 0.28), transparent 66%);
+}
+
+body.theme-luxury header {
+  background: linear-gradient(to bottom, rgba(9, 10, 10, 0.92), rgba(9, 10, 10, 0.72));
+  border-bottom-color: rgba(242, 210, 139, 0.16);
+}
+
+body.theme-luxury .card {
+  background: linear-gradient(170deg, rgba(28, 31, 30, 0.95), rgba(14, 16, 16, 0.94));
+  border-color: rgba(242, 210, 139, 0.28);
+}
+
+body.theme-luxury .card::after {
+  background: linear-gradient(115deg, rgba(242, 210, 139, 0.08), transparent 30%, transparent 72%, rgba(184, 147, 63, 0.08));
+}
+
+body.theme-luxury .btn {
+  background: linear-gradient(155deg, rgba(184, 147, 63, 0.58), rgba(184, 147, 63, 0.24));
+}
+
+body.theme-luxury .btn:hover {
+  background: linear-gradient(155deg, rgba(184, 147, 63, 0.75), rgba(242, 210, 139, 0.3));
+}
+
+body.theme-luxury .theme-toggle {
+  background: rgba(242, 210, 139, 0.14);
+}
+
+body.theme-luxury .theme-toggle:hover {
+  background: rgba(242, 210, 139, 0.24);
+}
+
+body.theme-luxury .hero-media img {
+  border-color: rgba(242, 210, 139, 0.6);
+  filter: saturate(0.9) contrast(1.03);
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -331,6 +412,10 @@ h1 {
   .topbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .theme-toggle {
+    margin-left: 0;
   }
 
   .nav-links {
