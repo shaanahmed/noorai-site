@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shaanahmed.github.io/noorai-site/sitemap.xml
