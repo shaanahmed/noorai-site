@@ -301,6 +301,98 @@ ul.feature-list li {
   text-transform: uppercase;
 }
 
+.table-wrap {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow-x: auto;
+  background: rgba(129, 199, 132, 0.05);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.compare-table th {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  background: rgba(129, 199, 132, 0.14);
+}
+
+.compare-table tbody tr:hover {
+  background: rgba(129, 199, 132, 0.08);
+}
+
+.compare-table td:nth-child(2) {
+  color: var(--text-muted);
+}
+
+.compare-table td:nth-child(3) {
+  color: var(--highlight);
+}
+
+.stat-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stat-card {
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(170deg, rgba(129, 199, 132, 0.13), rgba(129, 199, 132, 0.06));
+}
+
+.stat-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+}
+
+.stat-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.section-jump {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section-jump a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: var(--text);
+  background: rgba(129, 199, 132, 0.1);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-jump a:hover {
+  text-decoration: none;
+  border-color: var(--border-strong);
+  background: rgba(129, 199, 132, 0.2);
+}
+
 h1,
 h2,
 h3 {

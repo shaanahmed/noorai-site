@@ -5,6 +5,7 @@ Official support and legal website for NoorAI: Quran & Islamic Guide by NoorAI S
 ## Site Structure
 
 - index.html
+- features.html
 - privacy-policy.html
 - terms-and-conditions.html
 - disclaimer.html
